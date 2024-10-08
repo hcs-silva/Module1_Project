@@ -1,27 +1,67 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 @font-face {
-    font-family: Papyrus;
-    src: url(../fonts/papyrus.ttf);
+  font-family: Papyrus;
+  src: url(../fonts/papyrus.ttf);
 }
 
 body {
-    text-align: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
 }
-h1 {
-    font-family: Papyrus;
+
+h1,
+h2,
+p {
+  font-family: Papyrus;
+  font-weight: bold;
 }
 
 button {
-    font-family: Papyrus;
-    font-weight: bold;
+  font-family: Papyrus;
+  font-weight: bold;
+}
+
+.hide {
+  display: none;
+}
+
+#start-screen p {
+  padding: 5px;
 }
 
 #game-screen {
-    background-image: url(../Images/cave.png);
-    background-size: cover;
-    
+  text-align: left;
+  background-image: url(../Images/caveNew.png);
+  background-size: cover;
+}
+
+#lives-container {
+  width: auto;
+  padding: 5px;
+}
+
+#score-container {
+  width: auto;
+  padding: 5px;
+  font-family: Papyrus;
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+  padding-left: 25px;
+}
+
+#life1,
+#life2,
+#life3 {
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 30px;
+  width: 30px;
 }
