@@ -22,20 +22,20 @@ class Caveman {
     this.left += this.directionX;
     this.top += this.directionY;
 
-    if(this.left < 210) {
-        this.left = 210;
+    if (this.left < 210) {
+      this.left = 210;
     }
 
-    if(this.left > 1630) {
-        this.left = 1630;
+    if (this.left > 1630) {
+      this.left = 1630;
     }
 
-    if(this.top < 100) {
-        this.top = 100;
+    if (this.top < 100) {
+      this.top = 100;
     }
 
-    if(this.top > 730) {
-        this.top = 730;
+    if (this.top > 730) {
+      this.top = 730;
     }
 
     this.updatePosition();
@@ -43,9 +43,20 @@ class Caveman {
 
   updatePosition() {
     this.caveman.style.left = `${this.left}px`;
-    this.caveman.style.top = `${this.top}px`
+    this.caveman.style.top = `${this.top}px`;
   }
 
-  didColide(obstacle) {}
+  didColide(obstacle) {
+    const playerRect = this.caveman.getBoundingClientRect();
+    const obstacleRect = obstacle.sabertooth.getBoundingClientRect();
+
+    if (
+      playerRect.left < obstacleRect.right &&
+      playerRect.right > obstacleRect.left &&
+      playerRect.top < obstacleRect.bottom &&
+      playerRect.bottom > obstacleRect.top
+    ) {
+      return true;
+    } else return false;
+  }
 }
- 

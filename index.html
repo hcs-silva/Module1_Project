@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <div id="start-screen" >
+    <div id="start-screen">
       <h1>Primal</h1>
       <h2>Instructions</h2>
-      <div id="Instructions">
+      <div id="instructions">
         <p>
           You have entered a cave during a storm, might as well explore it for
           some goodies.
@@ -19,43 +19,45 @@
           Use your Spacebar to throw Clubs and the Arrow Keys to move your
           caveman.
         </p>
+        <p>
+          To win, keep avoiding or hitting the Sabertooth Tigers to gain points
+          until you run out of Ham!
+        </p>
+        <p>Good Luck!</p>
       </div>
       <div id="keys">
-        <img
-          src="./Images/Arrows.png"
-          alt="wasd keys"
-        />
+        <img src="./Images/Arrows.png" alt="wasd keys" id="wasd" />
       </div>
       <button id="start-button">Start</button>
     </div>
     <div id="game-screen" class="hide">
       <div id="lives-container">
-        <img
-          src="./Images/lives.png"
-          alt="pixelated heart"
-          id="life1"
-        />
-        <img
-          src="./Images/lives.png"
-          alt="pixelated heart"
-          id="life2"
-        />
-        <img
-          src="./Images/lives.png"
-          alt="pixelated heart"
-          id="life3"
-        />
+        <!-- <img
+            src="./Images/ham.png"
+            alt="pixelated heart"
+            id="life1"
+          />
+          <img
+            src="./Images/ham.png"
+            alt="pixelated heart"
+            id="life2"
+          />
+          <img
+            src="./Images/ham.png"
+            alt="pixelated heart"
+            id="life3"
+          /> -->
       </div>
-      <div id="score-container"><span id="score">0</span></div>
+      <div id="score-container"></div>
     </div>
+
     <div id="gameOver-screen" class="hide">
       <button id="restart">Restart</button>
     </div>
 
-
     <script src="./js/game.js"></script>
-    <script src="./js/player.js"></script>
     <script src="./js/obstacle.js"></script>
+    <script src="./js/player.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

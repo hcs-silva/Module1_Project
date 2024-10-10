@@ -16,6 +16,18 @@ body {
   margin-top: 100px;
 }
 
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
 h1,
 h2,
 p {
@@ -24,8 +36,14 @@ p {
 }
 
 button {
+  font-size: 1.5rem;
   font-family: Papyrus;
   font-weight: bold;
+  height: 45px;
+  width: 100px;
+  border: 2.5px solid black;
+  border-radius: 10px;
+  background-color: #c4aba9;
 }
 
 .hide {
@@ -38,13 +56,35 @@ button {
 
 #game-screen {
   text-align: left;
+  overflow: hidden;
   background-image: url(../Images/caveNew.png);
   background-size: cover;
+  animation: slide 10s linear infinite;
 }
+/* 
+@keyframes slide {
+  0% {
+    background-position: 1500px 0;
+  }
+  95% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2000 0px;
+  }
+} */
 
 #lives-container {
   width: auto;
   padding: 5px;
+}
+
+#lives-container {
+  font-family: Papyrus;
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+  padding-left: 25px;
 }
 
 #score-container {
@@ -62,6 +102,20 @@ button {
 #life3 {
   padding-top: 10px;
   padding-left: 10px;
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 50px;
+}
+
+#keys {
+  height: 300px;
+  padding-bottom: 50px;
+}
+
+#instructions {
+  padding-bottom: 0;
+}
+
+#wasd {
+  height: 350px;
+  width: 250px;
 }

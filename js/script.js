@@ -11,20 +11,20 @@ startBtn.addEventListener("click", function () {
 document.addEventListener("keydown", function (e) {
   //Handles the movement of the player
   if (e.key === "ArrowUp" || e.key === "w") {
-    myGame.player.directionY = -2;
+    myGame.player.directionY = -6;
   }
 
   if (e.key === "ArrowDown" || e.key === "s") {
-    myGame.player.directionY = 2;
+    myGame.player.directionY = 6;
   }
 
   //Player going left and right
   if (e.key === "ArrowLeft" || e.key === "a") {
-    myGame.player.directionX = -2;
+    myGame.player.directionX = -6;
   }
 
   if (e.key === "ArrowRight" || e.key === "d") {
-    myGame.player.directionX = 2;
+    myGame.player.directionX = 6;
   }
 });
 
