@@ -9,6 +9,7 @@ class Game {
     this.width = 1500;
     this.player = new Caveman(210, 280, 80, 120, "../Images/caveman.png");
     this.enemies = [];
+    this.clubs = [];
     this.score = 0;
     // this.life1 = document.querySelector("#life1");
     // this.life2 = document.querySelector("#life2");
@@ -52,6 +53,12 @@ class Game {
     //this creates the enemies and pushes them into the enemies array
     if (Math.random() > 0.98 && this.enemies.length < 1) {
       this.enemies.push(new Obstacle(this.gameScreen));
+    }
+      
+    for(let i = 0; i < this.clubs.length ; i++) {
+      const club = this.clubs[i];
+      club.move();
+
     }
 
     //loop throught the array of enemies and check for colision

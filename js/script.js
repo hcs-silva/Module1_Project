@@ -1,5 +1,5 @@
 const startBtn = document.querySelector("#start-button");
-const restartBtn = document.querySelector("#restart-button");
+const restartBtn = document.querySelector("#restart");
 
 let myGame;
 
@@ -7,7 +7,9 @@ startBtn.addEventListener("click", function () {
   startGame();
 });
 
-
+restartBtn.addEventListener("click", () => {
+  restartGame();
+});
 //Adding the Event Listener for the arrow keys or the W A S D keys
 
 document.addEventListener("keydown", function (e) {
@@ -28,7 +30,17 @@ document.addEventListener("keydown", function (e) {
   if (e.key === "ArrowRight" || e.key === "d") {
     myGame.player.directionX = 6;
   }
+
+  //player shooting clubs
+  console.log(e.key);
+  if (e.key === " ") {
+    myGame.clubs.push(
+      new Club(myGame.player.left + 80, myGame.player.top + 60)
+    );
+  }
 });
+
+document.addEventListener("keypress", (e) => {});
 
 document.addEventListener("keyup", (e) => {
   if (e.key === "ArrowUp" || e.key === "w") {
@@ -52,4 +64,8 @@ document.addEventListener("keyup", (e) => {
 function startGame() {
   myGame = new Game();
   myGame.start();
+}
+
+function restartGame() {
+  location.reload();
 }
