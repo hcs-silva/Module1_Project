@@ -49,7 +49,7 @@ class Game {
       const enemy = this.enemies[i];
       enemy.move();
     }
-    //this creates the enemies and pushed them into the enemies array
+    //this creates the enemies and pushes them into the enemies array
     if (Math.random() > 0.98 && this.enemies.length < 1) {
       this.enemies.push(new Obstacle(this.gameScreen));
     }
@@ -57,9 +57,7 @@ class Game {
     //loop throught the array of enemies and check for colision
     for (let i = 0; i < this.enemies.length; i++) {
       const enemy = this.enemies[i];
-        if(enemy.sabertooth.left < 100) {
-          enemy.sabertooth.remove()
-        }
+
       if (this.player.didColide(enemy)) {
         this.lives--;
         //removes the enemy from the array
@@ -67,9 +65,16 @@ class Game {
         //removes the enemy visualy from the DOM
         enemy.sabertooth.remove();
         //Updates the lives
-        this.livesDisplay.innerText = `${this.lives}`;             
+        this.livesDisplay.innerText = `${this.lives}`;
+      } else if (!this.player.didColide(enemy)) {
+        //if the player didnt colide with the enemy, it should bve removed from the screen when the enemy left property equals 100
+        if (enemy.left < 100) {
+          this.score += 10;
+          this.scoreDisplay.innerText = `${this.score}`;
+          this.enemies.splice(i, 1);
+          enemy.sabertooth.remove();
+        }
       }
-    
     }
 
     if (this.lives === 0) {

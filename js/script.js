@@ -1,10 +1,12 @@
 const startBtn = document.querySelector("#start-button");
 const restartBtn = document.querySelector("#restart-button");
+
 let myGame;
 
 startBtn.addEventListener("click", function () {
   startGame();
 });
+
 
 //Adding the Event Listener for the arrow keys or the W A S D keys
 

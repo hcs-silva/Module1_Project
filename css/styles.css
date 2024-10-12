@@ -10,6 +10,7 @@
 
 body {
   display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -44,11 +45,13 @@ button {
   border: 2.5px solid black;
   border-radius: 10px;
   background-color: #c4aba9;
+  margin-top: 50px;
 }
 
 .hide {
   display: none;
 }
+
 
 #start-screen p {
   padding: 5px;
@@ -59,20 +62,18 @@ button {
   overflow: hidden;
   background-image: url(../Images/caveNew.png);
   background-size: cover;
-  animation: slide 10s linear infinite;
+  animation: slide 30s linear infinite;
 }
-/* 
+
 @keyframes slide {
   0% {
     background-position: 1500px 0;
   }
-  95% {
-    background-position: 0 0;
-  }
+ 
   100% {
-    background-position: -2000 0px;
+    background-position: 0 0px;
   }
-} */
+}
 
 #lives-container {
   width: auto;
@@ -96,6 +97,11 @@ button {
   color: white;
   padding-left: 25px;
 }
+
+#gameOver-screen { 
+  align-items: center;
+}
+
 
 #life1,
 #life2,
