@@ -139,3 +139,11 @@ ol li{
   padding-left: 0;
   font-size: 2rem;
 }
+
+.rotate {
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  
+}

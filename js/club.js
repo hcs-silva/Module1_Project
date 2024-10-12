@@ -14,6 +14,7 @@ class Club {
     this.club.src = "../Images/club.png";
     this.club.style.height = `${this.height}px`;
     this.club.style.width = `${this.width}px`;
+    this.club.classList.add("rotate")
     this.gameScreen.appendChild(this.club);
   }
 
