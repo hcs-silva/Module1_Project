@@ -32,7 +32,7 @@ p {
 
 h1,
 h2,
-p {
+p, li, div {
   font-family: Papyrus;
   font-weight: bold;
 }
@@ -129,4 +129,13 @@ button {
 
 .lost {
   margin: 50px
+}
+
+#currentScore {
+  font-family: 3.5rem;
+}
+
+ol li{
+  padding-left: 0;
+  font-size: 2rem;
 }

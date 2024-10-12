@@ -3,6 +3,8 @@ class Game {
     this.startScreen = document.querySelector("#start-screen");
     this.gameScreen = document.querySelector("#game-screen");
     this.gameOverScreen = document.querySelector("#gameOver-screen");
+    this.highScoreDisplay = document.querySelector("#scores");
+    this.finalScore = document.querySelector("#currentScore")
     this.scoreDisplay = document.querySelector("#score-container");
     this.livesDisplay = document.querySelector("#lives-container");
     this.height = 750;
@@ -39,6 +41,23 @@ class Game {
 
     if (this.gameIsOver) {
       clearInterval(this.gameIntervalId);
+
+      const highScoreFromLS = JSON.parse(localStorage.getItem("highScores"))
+
+      if(!highScoreFromLS) {
+        localStorage.setItem("highScores", JSON.stringify([this.score]))
+      } else {
+        highScoreFromLS.push(this.score)
+        const highScores = highScoreFromLS.sort((a, b) => b - a)
+        const topThree = highScores.slice(0, 3);
+        localStorage.setItem("highScores", JSON.stringify([...topThree]))
+        //Updating the DOM to reflect the 3 top scores
+        topThree.forEach((score) => {
+          const newLi = document.createElement('li');
+          newLi.textContent = score;
+          this.highScoreDisplay.appendChild(newLi);
+        })
+      }
     }
   }
 
@@ -110,8 +129,8 @@ class Game {
     //this updates the score
     this.scoreDisplay.innerText = `${this.score}`;
 
- 
-
+    this.finalScore.innerText = `${this.score}`
+    
     if (this.lives === 0) {
       this.gameIsOver = true;
       this.endGame();
