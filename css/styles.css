@@ -15,6 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 100px;
+  background-color: #d3a561;
 }
 
 h1 {
@@ -45,7 +46,7 @@ button {
   border: 2.5px solid black;
   border-radius: 10px;
   background-color: #c4aba9;
-  margin-top: 50px;
+  
 }
 
 .hide {
@@ -124,4 +125,8 @@ button {
 #wasd {
   height: 350px;
   width: 250px;
+}
+
+.lost {
+  margin: 50px
 }

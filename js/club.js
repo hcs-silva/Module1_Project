@@ -18,7 +18,7 @@ class Club {
   }
 
   move() {
-    this.left += 6;
+    this.left += 12;
     this.updatePosition();
   }
 

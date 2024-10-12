@@ -34,7 +34,8 @@ class Obstacle {
     
 
     if (this.left > 1)
-    this.left -= 2;
+    this.left -= 5;
     this.updatePosition();
   }
+
 }

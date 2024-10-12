@@ -45,20 +45,44 @@ class Game {
   update() {
     //Update game state here
     this.player.move();
+    let counter = 1;
+    let currentTarget = 100;
+    if (this.score > currentTarget) {
+      counter *= 4
+      currentTarget += 150;
+    }
 
     for (let i = 0; i < this.enemies.length; i++) {
       const enemy = this.enemies[i];
       enemy.move();
     }
     //this creates the enemies and pushes them into the enemies array
-    if (Math.random() > 0.98 && this.enemies.length < 1) {
+    if (Math.random() > 0.98 && this.enemies.length < counter) {
       this.enemies.push(new Obstacle(this.gameScreen));
     }
-      
-    for(let i = 0; i < this.clubs.length ; i++) {
+
+    //this loops throught the clubs array and moves all the clubs
+    for (let i = 0; i < this.clubs.length; i++) {
       const club = this.clubs[i];
       club.move();
 
+      //this checks for colision of the current club with the current enemy
+      for (let j = 0; j < this.enemies.length; j++) {
+        const currentEnemy = this.enemies[j];
+        if (club.didColide(currentEnemy)) {
+          //removes the enemy from the array
+          this.enemies.splice(j, 1);
+          
+          //removes the enemy and the club from the DOM
+          currentEnemy.sabertooth.remove();
+          club.club.remove();
+          this.score += 40;
+        } 
+
+        if( !club.didColide(currentEnemy) && club.left > 1700) {
+            club.club.remove()
+        }
+      }
     }
 
     //loop throught the array of enemies and check for colision
@@ -74,15 +98,19 @@ class Game {
         //Updates the lives
         this.livesDisplay.innerText = `${this.lives}`;
       } else if (!this.player.didColide(enemy)) {
-        //if the player didnt colide with the enemy, it should bve removed from the screen when the enemy left property equals 100
+        //if the player didnt colide with the enemy, it is removed from the screen when the enemy left property equals 100
         if (enemy.left < 100) {
           this.score += 10;
-          this.scoreDisplay.innerText = `${this.score}`;
+
           this.enemies.splice(i, 1);
           enemy.sabertooth.remove();
         }
       }
     }
+    //this updates the score
+    this.scoreDisplay.innerText = `${this.score}`;
+
+ 
 
     if (this.lives === 0) {
       this.gameIsOver = true;
