@@ -10,7 +10,7 @@ class Game {
     this.name = document.querySelector("#name").value;
     this.height = 750;
     this.width = 1500;
-    this.player = new Caveman(210, 280, 80, 120, "images/caveman.png");
+    this.player = new Caveman(210, 280, 80, 120, "../images/caveman.png");
     this.enemies = [];
     this.clubs = [];
     this.score = 0;
@@ -18,10 +18,10 @@ class Game {
     this.gameIsOver = false;
     this.gameIntervalId = null;
     this.gameLoopFrequency = Math.floor(1000 / 60);
-    this.throw = new Audio("sounds/Throw.wav");
-    this.growl = new Audio("sounds/growl.wav");
-    this.ouch = new Audio("sounds/ouch.mp3");
-    this.gameOver = new Audio("sounds/gameOver.wav");
+    this.throw = new Audio("../sounds/Throw.wav");
+    this.growl = new Audio("../sounds/growl.wav");
+    this.ouch = new Audio("../sounds/ouch.mp3");
+    this.gameOver = new Audio("../sounds/gameOver.wav");
   }
 
   start() {
