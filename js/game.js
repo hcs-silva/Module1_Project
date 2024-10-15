@@ -40,7 +40,7 @@ class Game {
     //this method creates the image elements for the visual representation of lives
     for (let i = 0; i < this.lives; i++) {
       const hamImg = document.createElement("img");
-      hamImg.src = "images/ham.png";
+      hamImg.src = "../images/ham.png";
       hamImg.alt = "Cartoony Ham";
       hamImg.classList.add('lives');
       this.livesDisplay.appendChild(hamImg);
