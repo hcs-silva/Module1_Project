@@ -11,7 +11,7 @@ class Club {
     this.club.style.position = "absolute";
     this.club.style.left = `${this.left}px`;
     this.club.style.top = `${this.top}px`;
-    this.club.src = "../Images/club.png";
+    this.club.src = "Images/club.png";
     this.club.style.height = `${this.height}px`;
     this.club.style.width = `${this.width}px`;
     this.club.classList.add("rotate");

@@ -11,7 +11,7 @@ class Obstacle {
     this.sabertooth.style.left = `${this.left}px`;
     this.sabertooth.style.top = `${this.top}px`;
     this.sabertooth.style.overflow = "hidden";
-    this.sabertooth.src = "../Images/diego.png";
+    this.sabertooth.src = "Images/diego.png";
     this.sabertooth.style.height = `${this.height}px`;
     this.sabertooth.style.width = `${this.width}px`;
     this.gameScreen.appendChild(this.sabertooth);
