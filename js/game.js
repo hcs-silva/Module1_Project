@@ -10,7 +10,7 @@ class Game {
     this.name = document.querySelector("#name").value;
     this.height = 750;
     this.width = 1500;
-    this.player = new Caveman(210, 280, 80, 120, "../images/caveman.png");
+    this.player = new Caveman(210, 280, 80, 120, "../Images/caveman.png");
     this.enemies = [];
     this.clubs = [];
     this.score = 0;
@@ -18,10 +18,10 @@ class Game {
     this.gameIsOver = false;
     this.gameIntervalId = null;
     this.gameLoopFrequency = Math.floor(1000 / 60);
-    this.throw = new Audio("../sounds/Throw.wav");
-    this.growl = new Audio("../sounds/growl.wav");
-    this.ouch = new Audio("../sounds/ouch.mp3");
-    this.gameOver = new Audio("../sounds/gameOver.wav");
+    this.throw = new Audio("../Sounds/Throw.wav");
+    this.growl = new Audio("../Sounds/growl.wav");
+    this.ouch = new Audio("../Sounds/ouch.mp3");
+    this.gameOver = new Audio("../Sounds/gameOver.wav");
   }
 
   start() {
@@ -40,7 +40,7 @@ class Game {
     //this method creates the image elements for the visual representation of lives
     for (let i = 0; i < this.lives; i++) {
       const hamImg = document.createElement("img");
-      hamImg.src = "../images/ham.png";
+      hamImg.src = "../Images/ham.png";
       hamImg.alt = "Cartoony Ham";
       hamImg.classList.add('lives');
       this.livesDisplay.appendChild(hamImg);
