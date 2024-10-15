@@ -31,12 +31,13 @@ document.addEventListener("keydown", function (e) {
     myGame.player.directionX = 6;
   }
 
-  //player shooting clubs
-  console.log(e.key);
+  //player shooting clubs 
   if (e.key === " ") {
     myGame.clubs.push(
       new Club(myGame.player.left + 80, myGame.player.top + 60)
     );
+    myGame.throw.play()
+    
   }
 });
 

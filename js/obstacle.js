@@ -10,10 +10,10 @@ class Obstacle {
     this.sabertooth.style.position = "absolute";
     this.sabertooth.style.left = `${this.left}px`;
     this.sabertooth.style.top = `${this.top}px`;
-    this.sabertooth.src = "../Images/diego.png";
+    this.sabertooth.style.overflow = "hidden";
+    this.sabertooth.src = "images/diego.png";
     this.sabertooth.style.height = `${this.height}px`;
     this.sabertooth.style.width = `${this.width}px`;
-
     this.gameScreen.appendChild(this.sabertooth);
   }
 
@@ -23,19 +23,15 @@ class Obstacle {
   }
 
   move() {
-    if(this.top < 100) {
-        this.top = 100
+    if (this.top < 100) {
+      this.top = 100;
     }
 
-    if(this.top > 600) {
-        this.top = 600
+    if (this.top > 600) {
+      this.top = 600;
     }
 
-    
-
-    if (this.left > 1)
-    this.left -= 5;
+    if (this.left > 1) this.left -= 5;
     this.updatePosition();
   }
-
 }
