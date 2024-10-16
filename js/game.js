@@ -143,7 +143,7 @@ class Game {
       } else if (!this.player.didColide(enemy)) {
         //if the player didnt colide with the enemy, it is removed from the screen when the enemy left property equals 100
         if (enemy.left < 100) {
-          this.score += 10;
+          this.score += 5;
           this.enemies.splice(i, 1);
           enemy.sabertooth.remove();
         }

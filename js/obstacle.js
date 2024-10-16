@@ -31,7 +31,7 @@ class Obstacle {
       this.top = 600;
     }
 
-    if (this.left > 1) this.left -= 5;
+    if (this.left > 1) this.left -= 10;
     this.updatePosition();
   }
 }
