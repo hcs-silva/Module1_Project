@@ -22,20 +22,20 @@ class Caveman {
     this.left += this.directionX;
     this.top += this.directionY;
 
-    if (this.left < 210) {
-      this.left = 210;
+    if (this.left < 0) {
+      this.left = 0;
     }
 
     if (this.left > 1630) {
       this.left = 1630;
     }
 
-    if (this.top < 100) {
-      this.top = 100;
+    if (this.top < 0) {
+      this.top = 0;
     }
 
-    if (this.top > 730) {
-      this.top = 730;
+    if (this.top > 630) {
+      this.top = 630;
     }
 
     this.updatePosition();

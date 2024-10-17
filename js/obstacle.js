@@ -12,7 +12,7 @@ class Obstacle {
     this.sabertooth.style.top = `${this.top}px`;
     this.sabertooth.style.overflow = "hidden";
     this.sabertooth.src = "Images/diego.png";
-    this.sabertooth.style.height = `${this.height}px`;
+    this.sabertooth.style.height = `${this.height}px`;      
     this.sabertooth.style.width = `${this.width}px`;
     this.gameScreen.appendChild(this.sabertooth);
   }
@@ -31,7 +31,7 @@ class Obstacle {
       this.top = 600;
     }
 
-    if (this.left > 1) this.left -= 10;
+    if (this.left > -110) this.left -= 10;
     this.updatePosition();
   }
 }

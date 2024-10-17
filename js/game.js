@@ -10,7 +10,7 @@ class Game {
     this.name = document.querySelector("#name").value;
     this.height = 750;
     this.width = 1500;
-    this.player = new Caveman(210, 280, 80, 120, "Images/caveman.png");
+    this.player = new Caveman(0, 280, 80, 120, "Images/caveman.png");
     this.enemies = [];
     this.clubs = [];
     this.score = 0;
@@ -142,7 +142,7 @@ class Game {
        
       } else if (!this.player.didColide(enemy)) {
         //if the player didnt colide with the enemy, it is removed from the screen when the enemy left property equals 100
-        if (enemy.left < 100) {
+        if (enemy.left < -100) {
           this.score += 5;
           this.enemies.splice(i, 1);
           enemy.sabertooth.remove();

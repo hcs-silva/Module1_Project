@@ -1,5 +1,6 @@
 const startBtn = document.querySelector("#start-button");
 const restartBtn = document.querySelector("#restart");
+const inputElement = document.querySelector("#name")
 
 let myGame;
 
@@ -41,7 +42,7 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-document.addEventListener("keypress", (e) => {});
+
 
 document.addEventListener("keyup", (e) => {
   if (e.key === "ArrowUp" || e.key === "w") {

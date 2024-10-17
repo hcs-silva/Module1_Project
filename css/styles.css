@@ -59,11 +59,13 @@ button {
 }
 
 #game-screen {
+  position:relative;
   text-align: left;
   overflow: hidden;
   background-image: url(../Images/caveNew.png);
   background-size: cover;
   animation: slide 30s linear infinite;
+  border: 1px solid white;
   border-radius: 15px;
 }
 
@@ -79,7 +81,7 @@ button {
 
 #lives-container {
   width: auto;
-  padding: 5px;
+  padding: 5px;  
 }
 
 #lives-container {
@@ -97,7 +99,7 @@ button {
   font-weight: bold;
   font-size: 2rem;
   color: white;
-  padding-left: 25px;
+  padding-left: 25px;  
 }
 
 #gameOver-screen { 
