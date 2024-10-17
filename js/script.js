@@ -3,6 +3,7 @@ const restartBtn = document.querySelector("#restart");
 const inputElement = document.querySelector("#name");
 const speakerElement = document.querySelector(".speaker");
 const mainTheme = new Audio('../Sounds/main.wav');
+
 const gameOverScreen = document.querySelector("#gameOver-screen");
 
 let myGame;
@@ -16,6 +17,7 @@ restartBtn.addEventListener("click", () => {
 });
 
 speakerElement.addEventListener('click', () => {
+  mainTheme.volume = 0.2;
   mainTheme.play();
   if(!gameOverScreen.classList.contains('hide')) {
     mainTheme.stop();
@@ -49,6 +51,7 @@ document.addEventListener("keydown", function (e) {
     myGame.clubs.push(
       new Club(myGame.player.left + 80, myGame.player.top + 60)
     );
+    myGame.throw.volume = 0.2;
     myGame.throw.play()
     
   }

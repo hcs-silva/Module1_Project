@@ -106,6 +106,7 @@ class Game {
       for (let j = 0; j < this.enemies.length; j++) {
         const currentEnemy = this.enemies[j];
         if (club.didColide(currentEnemy)) {
+          this.growl.volume = 0.2;
           this.growl.play();
           //removes the enemy from the array
           this.enemies.splice(j, 1);
@@ -131,6 +132,7 @@ class Game {
       const enemy = this.enemies[i];
 
       if (this.player.didColide(enemy)) {
+        this.ouch.volume = 0.2;
         this.ouch.play();
         this.lives--;
         this.livesDisplay.innerHTML = '';
