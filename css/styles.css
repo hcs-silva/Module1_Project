@@ -46,7 +46,7 @@ button {
   border: 2.5px solid black;
   border-radius: 10px;
   background-color: #c4aba9;
-  
+  margin-bottom: 15px;
 }
 
 .hide {
@@ -166,4 +166,9 @@ input {
   height: 25px;
   border-radius: 5px;
   margin-bottom: 35px;
+}
+
+.speaker {
+  height: 25px;
+  width: 25px;
 }

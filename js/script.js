@@ -1,6 +1,9 @@
 const startBtn = document.querySelector("#start-button");
 const restartBtn = document.querySelector("#restart");
-const inputElement = document.querySelector("#name")
+const inputElement = document.querySelector("#name");
+const speakerElement = document.querySelector(".speaker");
+const mainTheme = new Audio('../Sounds/main.wav');
+const gameOverScreen = document.querySelector("#gameOver-screen");
 
 let myGame;
 
@@ -11,6 +14,15 @@ startBtn.addEventListener("click", function () {
 restartBtn.addEventListener("click", () => {
   restartGame();
 });
+
+speakerElement.addEventListener('click', () => {
+  mainTheme.play();
+  if(!gameOverScreen.classList.contains('hide')) {
+    mainTheme.stop();
+  }
+});
+
+
 //Adding the Event Listener for the arrow keys or the W A S D keys
 
 document.addEventListener("keydown", function (e) {
