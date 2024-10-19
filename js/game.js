@@ -154,7 +154,7 @@ class Game {
     //this updates the score
     this.scoreDisplay.innerText = `Your score is: ${this.score}`;
 
-    this.finalScore.innerText = `Your final score is: ${this.score}`;
+    this.finalScore.innerText = `${this.score}`;
 
     if (this.lives === 0) {
       this.gameIsOver = true;
