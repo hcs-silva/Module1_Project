@@ -17,7 +17,7 @@ restartBtn.addEventListener("click", () => {
 });
 
 speakerElement.addEventListener('click', () => {
-  mainTheme.volume = 0.2;
+  mainTheme.volume = 0.4;
   mainTheme.play();
   if(!gameOverScreen.classList.contains('hide')) {
     mainTheme.stop();
