@@ -2,7 +2,7 @@ const startBtn = document.querySelector("#start-button");
 const restartBtn = document.querySelector("#restart");
 const inputElement = document.querySelector("#name");
 const speakerElement = document.querySelector(".speaker");
-const mainTheme = new Audio('../Sounds/main.wav');
+const mainTheme = new Audio('Sounds/main.wav');
 
 const gameOverScreen = document.querySelector("#gameOver-screen");
 
